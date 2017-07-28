@@ -42,5 +42,9 @@ public class WelcomeServlet extends HttpServlet{
     {
     	request.getServletContext().getRequestDispatcher("/clientrequest.jsp").forward(request, response);
     }
+    else if(btnvalue.equals("Site Maintenance"))
+    {
+    	request.getServletContext().getRequestDispatcher("/sitemaintenance.jsp").forward(request, response);
+    }
 }
 }

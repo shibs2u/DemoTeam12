@@ -40,7 +40,7 @@
                 <td><%=pList.get(1)%></td>
                                  <input type="hidden" name="param1" value=pList.get(0)>
                                  <input type="hidden" name="param2" value=pList.get(1)>
-                                  <!--<td><a href="${pageContext.request.contextPath}/Modifycl.jsp" onclick="<%=request.setAttribute("name", pList.get(0)) %>" >Update</a></td>-->
+<%--                                   <!--<td><a href="${pageContext.request.contextPath}/Modifycl.jsp" onclick="<%=request.setAttribute("name", pList.get(0)) %>" >Update</a></td>--> --%>
     			
               <td><a href="${pageContext.request.contextPath}/Modifycl.jsp?name=reena">Update</a></td>
                 <!--<td><input type='button' name='edit' value='Edit' onclick='editRecord(${row.no})' /></td>-->

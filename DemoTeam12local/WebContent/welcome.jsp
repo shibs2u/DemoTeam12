@@ -18,6 +18,8 @@
             <input type="submit" id="btn2" name="kb" value="Update Client" action="openPage('modifyclient.jsp')"/>
             
             <input type="submit" id="btn3" name="kb" value="Client Request" action="openPage('clientrequest.jsp')"/>
+            
+            <input type="submit" id="btn4" name="kb" value="Site Maintenance" action="openPage('sitemaintenance.jsp')"/>
        </form>  
      </body>
 </html>
