@@ -16,15 +16,10 @@ public class CreatclientDAO {
             PreparedStatement pst = null;
             ResultSet rs = null;
 
-            String url = "jdbc:mysql://localhost:3306/";
-            String dbName = "cs6400_sp17_team012";
-            String driver = "com.mysql.jdbc.Driver";
-            String userName = "root";
-            String password = "root";
+
             try {
-                Class.forName(driver).newInstance();
-                conn = DriverManager
-                        .getConnection(url + dbName, userName, password);
+
+            	 conn = DBUtil.getConnection();
 
                 pst = conn.prepareStatement("INSERT INTO client (Siteid,client_Name,phoneNumber) VALUES (1,?,?)");
                 pst.setString(1, name);

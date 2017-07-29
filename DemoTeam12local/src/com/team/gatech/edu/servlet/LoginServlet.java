@@ -29,8 +29,10 @@ public class LoginServlet extends HttpServlet{
         String p=request.getParameter("userpass"); 
         
         HttpSession session = request.getSession(false);
+        
         if(session!=null)
         session.setAttribute("name", n);
+      //  request.setAttribute("name", n);
 
         if(LoginDao.validate(n, p)){  
         	System.out.println("here______");

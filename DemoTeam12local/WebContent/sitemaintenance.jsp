@@ -14,11 +14,11 @@
 
 
 
-    <form action="ClientRequestServlet" border="1" method="post" action="" onsubmit="redirect(this);">
+    <form action="SiteMaintenanceServlet" border="1" method="post" >
         <!--<fieldset style="width: 300px">-->
         
         
-            <h2><center><legend> Site Details-Please select </legend></center></h2>
+            <h2><center><legend> Site Details-Please select your current assigned Sites </legend></center></h2>
        
     		<table align ="center" width="700px"
                style="border:1px solid #000000;">
@@ -56,11 +56,6 @@
     		</table>
    
     </form>
-    	<script>
-    	function redirect(elem){
-    	     elem.setAttribute("action","sitevalue.jsp");
-    	     elem.submit();
-    	}
-		</script>
+
 </body>
 </html>

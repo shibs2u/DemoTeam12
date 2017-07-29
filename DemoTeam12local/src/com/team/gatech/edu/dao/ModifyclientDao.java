@@ -17,22 +17,17 @@ public class ModifyclientDao {
         PreparedStatement pst = null;
         ResultSet rs = null;
 
-        String url = "jdbc:mysql://localhost:3306/";
-        String dbName = "cs6400_sp17_team012";
-        String driver = "com.mysql.jdbc.Driver";
-        String userName = "root";
-        String password = "root";
+
         ArrayList al = null;
         ArrayList pid_list = new ArrayList();
        
         System.out.println(searchval);
         
         try {
-            Class.forName(driver).newInstance();
-            conn = DriverManager.getConnection(url + dbName, userName, password);
+
             //System.out.println("Connected!");
             //String pid = request.getParameter("pid");
- 
+        	 conn = DBUtil.getConnection();
             pst = conn
                     .prepareStatement("Select clientid,client_name,phonenumber from client where client_name=? order by client_name desc limit 4;");
              pst.setString(1, searchval);

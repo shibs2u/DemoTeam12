@@ -112,6 +112,15 @@
         <servlet-name>updateresultservlet</servlet-name>
         <url-pattern>/UpdateResultservlet</url-pattern>
     </servlet-mapping>
+          <servlet>
+        <servlet-name>sitemaintenance</servlet-name>
+        <servlet-class>com.team.gatech.edu.servlet.SiteMaintenanceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sitemaintenance</servlet-name>
+        <url-pattern>/SiteMaintenanceServlet</url-pattern>
+    </servlet-mapping>
     
     
     
