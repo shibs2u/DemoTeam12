@@ -21,7 +21,7 @@ public class ModifyclientDao {
         String dbName = "cs6400_sp17_team012";
         String driver = "com.mysql.jdbc.Driver";
         String userName = "root";
-        String password = "";
+        String password = "root";
         ArrayList al = null;
         ArrayList pid_list = new ArrayList();
        
@@ -34,7 +34,7 @@ public class ModifyclientDao {
             //String pid = request.getParameter("pid");
  
             pst = conn
-                    .prepareStatement("Select client_name,phonenumber from client where client_name=? order by client_name desc limit 4;");
+                    .prepareStatement("Select clientid,client_name,phonenumber from client where client_name=? order by client_name desc limit 4;");
              pst.setString(1, searchval);
            
 
@@ -46,8 +46,9 @@ public class ModifyclientDao {
                
                 al.add(rs.getString(1));
                 al.add(rs.getString(2));
+                al.add(rs.getString(3));
                 
-                System.out.println("al :: " + al);
+                //System.out.println("al :: " + al);
                  pid_list.add(al);
                
             }

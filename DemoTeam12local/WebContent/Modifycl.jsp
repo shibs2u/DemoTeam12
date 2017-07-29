@@ -8,22 +8,35 @@
 <br>
 </head>
 <body>
+		<% 
+		    String id = request.getParameter("id");  
+			String phone = request.getParameter("phone"); 
+			String name = request.getParameter("name"); 
+			System.out.println(id + "" + phone + "" + name); 
+		%>
+	
     <form action="getclientservlet" method="post">
         <!--<fieldset style="width: 300px">-->
         
             <legend> Modify Client Information </legend>
             
-          <%--  name=<%=request.getatrribute("val")%> --%>
+   		<c:out value=phone></c:out>
+   		<c:out value=name></c:out>
+   				
             <table align="center">
                 <tr>
                     <td>Client Name</td>
-                    <td><input type="text" name="clientname" required="required" value=name></td>
+                    <td><input type="text" name="clientname" required="required" value=<%=name%>></td>
                 </tr>
                 <tr>
                     <td>Client Phone #</td>
-                    <td><input type="text" name="phone" required="required" value="6790009878"></td>
+                    <td><input type="text" name="phone" required="required" value=<%=phone%>></td>
                 </tr>
-               <tr>
+                
+                   <tr>
+                        <td><input type="hidden" name="id"  value=<%=id%>></td>
+                </tr>
+                 <tr>
                     <td><input type="submit" value="Update" /></td>
                 </tr>
             </table>

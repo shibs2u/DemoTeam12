@@ -18,7 +18,7 @@ package com.team.gatech.edu.dao;
 	        String dbName = "cs6400_sp17_team012";
 	        String driver = "com.mysql.jdbc.Driver";
 	        String userName = "root";
-	        String password = "";
+	        String password = "root";
 	        try {
 	            Class.forName(driver).newInstance();
 	            conn = DriverManager

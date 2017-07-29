@@ -29,21 +29,20 @@
                     while (itr.hasNext()) {
  
                         if ((count % 2) == 0) {
-                            color = "#eeffee";
+                            //color = "#eeffee";
                         }
                         count++;
                         ArrayList pList = (ArrayList) itr.next();
             %>
         
             <tr style="background-color:<%=color%>;">
-                <td><%=pList.get(0)%></td>
                 <td><%=pList.get(1)%></td>
+                <td><%=pList.get(2)%></td>
                                  <input type="hidden" name="param1" value=pList.get(0)>
                                  <input type="hidden" name="param2" value=pList.get(1)>
-<%--                                   <!--<td><a href="${pageContext.request.contextPath}/Modifycl.jsp" onclick="<%=request.setAttribute("name", pList.get(0)) %>" >Update</a></td>--> --%>
-    			
-              <td><a href="${pageContext.request.contextPath}/Modifycl.jsp?name=reena">Update</a></td>
-                <!--<td><input type='button' name='edit' value='Edit' onclick='editRecord(${row.no})' /></td>-->
+       
+                 <td><a href="${pageContext.request.contextPath}/Modifycl.jsp?id=<%=pList.get(0)%>&name=<%=pList.get(1)%>&phone=<%=pList.get(2)%>">Update</a></td>
+           
             </tr>
             <%
                     }

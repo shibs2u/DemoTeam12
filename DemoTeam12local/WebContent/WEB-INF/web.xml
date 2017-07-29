@@ -62,10 +62,6 @@
   <welcome-file-list>
     <welcome-file>Modifycl.jsp</welcome-file>
   </welcome-file-list>
-    
-
-    
-
 
      <servlet>
         <servlet-name>clientrequestservlet</servlet-name>
@@ -97,7 +93,7 @@
         <url-pattern>/SiteValueServlet_soupk</url-pattern>
     </servlet-mapping>
     
-          <servlet>
+     <servlet>
         <servlet-name>sitevalueservletshelter</servlet-name>
         <servlet-class>com.team.gatech.edu.servlet.SiteValueServlet_shelter</servlet-class>
     </servlet>
@@ -106,4 +102,17 @@
         <servlet-name>sitevalueservletshelter</servlet-name>
         <url-pattern>/SiteValueServlet_shelter</url-pattern>
     </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>updateresultservlet</servlet-name>
+        <servlet-class>com.team.gatech.edu.servlet.UpdateResultservlet</servlet-class>
+    </servlet>
+    
+     <servlet-mapping>
+        <servlet-name>updateresultservlet</servlet-name>
+        <url-pattern>/UpdateResultservlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    
 </web-app>

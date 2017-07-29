@@ -26,20 +26,21 @@ public class Updateclientservlet extends HttpServlet{
         
         String cname=request.getParameter("clientname");  
         String phone=request.getParameter("phone"); 
-        
+        int id=Integer.parseInt(request.getParameter("id"));
+     
         HttpSession session = request.getSession(false);
         if(session!=null)
         //session.setAttribute("name", n);
 
-        if(UpdateclientservletDao.clientupdate(cname, phone)){  
+        if(UpdateclientservletDao.clientupdate(cname, phone,id)){  
         	//System.out.println("here______");
-            //RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");
-            //rd.forward(request,response); 
+            RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");
+            rd.forward(request,response); 
         	out.print("<p style=\"color:red\">Client Update successful</p>");  
             
         }  
         else{  
-            out.print("<p style=\"color:red\">Sorry username or password error</p>");  
+            out.print("<p style=\"color:red\">Sorry client could not be updated</p>");  
             //RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
             //rd.include(request,response);  
         }  
