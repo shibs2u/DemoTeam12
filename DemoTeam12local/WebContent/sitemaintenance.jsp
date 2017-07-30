@@ -18,7 +18,7 @@
         <!--<fieldset style="width: 300px">-->
         
         
-            <h2><center><legend> Site Details-Please select your current assigned Sites </legend></center></h2>
+            <h2><center><legend> Site Details </legend></center></h2>
        
     		<table align ="center" width="700px"
                style="border:1px solid #000000;">
@@ -32,12 +32,7 @@
                 <td>${record.city }</td>
                 <td>${record.state }</td>
                 <td>${record.zipcode }</td>
-                <td>
-                <div class="checkbox">  
-                <input type="hidden" name="check[]" value="record">    
-                <label><INPUT TYPE="checkbox" name="check[]"/>Check</label>
-                </div>
-                </td>
+      
                 
             	</tr>
            
@@ -49,8 +44,34 @@
         		
         	     <tr>
         	    <td></td>
+        	
+                </tr>
+    		</table>
+    		
+    		<h2><center><legend> Available Services </legend></center></h2>
+    		
+    		<table align ="center" width="700px"
+               style="border:1px solid #000000;">
+             
+          	  <tr>
+
+              <td> Food Pantry  :<% out.print(request.getAttribute("isfoodpantry")); %></td>
+              <td> Soup Kitchen :<% out.print(request.getAttribute("issoupkitchen")); %></td>
+              <td> Shelter : <% out.print(request.getAttribute("isshelter")); %></td>
+               	
+				</tr>
+           
+        	
+        		<tr></tr>
+        		<tr></tr>
+        		<tr></tr>
+        		<tr></tr>
+        		
+        	     <tr>
+        	    <td></td>
         	   	<td>
-        	    	 <input type="submit" id="btn3" name="kb" value="Submit Selection" />
+        	    	 <input type="submit" id="btn3" name="kb" value="Add Services" />
+        	    	  <input type="submit" id="btn4" name="kb" value="Delete Services" />
                 </td>
                 </tr>
     		</table>

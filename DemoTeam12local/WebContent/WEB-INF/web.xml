@@ -121,7 +121,24 @@
         <servlet-name>sitemaintenance</servlet-name>
         <url-pattern>/SiteMaintenanceServlet</url-pattern>
     </servlet-mapping>
-    
+              <servlet>
+        <servlet-name>deleteservice</servlet-name>
+        <servlet-class>com.team.gatech.edu.servlet.DeleteServiceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>deleteservice</servlet-name>
+        <url-pattern>/DeleteServiceServlet</url-pattern>
+    </servlet-mapping>
+                  <servlet>
+        <servlet-name>addservice</servlet-name>
+        <servlet-class>com.team.gatech.edu.servlet.AddServiceServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addservice</servlet-name>
+        <url-pattern>/AddserviceServlet</url-pattern>
+    </servlet-mapping>
     
     
 </web-app>
